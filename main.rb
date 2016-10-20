@@ -6,8 +6,12 @@ name = calculator.greeting
 run_calculator = 1
 
 while run_calculator == 1
-
-  current_calculation = calculator.request_calculation_type
+  print(
+    'Type 1 to add, 2 to subtract, 3 to multiply, or '\
+    '4 to divide two numbers: '
+  )
+  operation_selection = gets.to_i
+  current_calculation = calculator.request_calculation_type(operation_selection)
   if current_calculation == 'error'
     puts 'I do not understand this type of calculation... Can we try again?'
   else
