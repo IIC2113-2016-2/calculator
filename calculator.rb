@@ -169,7 +169,7 @@ class Calculator  < Minitest::Test
   end
 
   def test_add_negative_with_string
-    assert_raises Failure do
+    assert_raises TypeError do
       assert_raises calculate_answer('add', 2 , 'oli')
     end
   end
