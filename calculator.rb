@@ -13,12 +13,7 @@ class Calculator
 
   # This method ask the user what type of calculation they would like to perform
   # It returns the operation or an error for erroneous entry
-  def request_calculation_type
-    print(
-      'Type 1 to add, 2 to subtract, 3 to multiply, or '\
-      '4 to divide two numbers: '
-    )
-    operation_selection = gets.to_i
+  def request_calculation_type(operation_selection)
     if operation_selection == 1
       'add'
     elsif operation_selection == 2
